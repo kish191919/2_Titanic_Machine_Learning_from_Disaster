@@ -38,13 +38,14 @@ Survived (contains your binary predictions: 1 for survived, 0 for deceased)
 ### Data fields
 pclass: A proxy for socio-economic status (SES)
 
-1st = Upper
+- 1st = Upper
+- 2nd = Middle
 
-2nd = Middle
+- 3rd = Lower
 
-3rd = Lower
 
 age: Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5
+
 
 sibsp: The dataset defines family relations in this way...
 
