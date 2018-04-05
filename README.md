@@ -27,39 +27,32 @@ For each PassengerId in the test set, predict a 0 or 1 value for the Survived va
 
 Score is the percentage of passengers you correctly predict. This is known simply as "accuracy”.
 
-Submit a csv file with exactly 418 entries plus a header row. 
+ Submit a csv file with exactly 418 entries plus a header row. 
 
-The file should have exactly 2 columns:
+ The file should have exactly 2 columns:
 
-PassengerId (sorted in any order)
+ PassengerId (sorted in any order)
 
 Survived (contains your binary predictions: 1 for survived, 0 for deceased)
 
 ### Data fields
 pclass: A proxy for socio-economic status (SES)
-
--1st = Upper
-** 2nd = Middle
-
-|3rd = Lower
+ - 1st = Upper
+ - 2nd = Middle
+ - 3rd = Lower
 
 
 age: Age is fractional if less than 1. If the age is estimated, is it in the form of xx.5
 
 
 sibsp: The dataset defines family relations in this way...
-
-Sibling = brother, sister, stepbrother, stepsister
-
-Spouse = husband, wife (mistresses and fiancés were ignored)
+ - Sibling = brother, sister, stepbrother, stepsister
+ - Spouse = husband, wife (mistresses and fiancés were ignored)
 
 parch: The dataset defines family relations in this way...
-
-Parent = mother, father
-
-Child = daughter, son, stepdaughter, stepson
-
-Some children travelled only with a nanny, therefore parch=0 for them.
+ - Parent = mother, father
+ - Child = daughter, son, stepdaughter, stepson
+ - Some children travelled only with a nanny, therefore parch=0 for them.
 
 ### Evaliation:
 
