@@ -1,9 +1,7 @@
 # Titanic_Machine_Learning_from_Disaster
 
 Predict survival on the Titanic and get familiar with ML basics
-
 This project follows the instructions of a Kaggle competition since 2012.
-
 The link of the competition is https://www.kaggle.com/c/titanic
 
 ### Data description
@@ -51,79 +49,106 @@ parch: The dataset defines family relations in this way...
 
 ### Evaluation:
 
-Random Forest:
+DecisionTreeClassifier:
 ```
-Training Score: 0.43107505964550397
+Training Score: 0.8183733401430031
 Confusion Matrix:
- [[7844    2   54]
- [5459   98   78]
- [5301    3  740]]
- 10-fold Cross Validation Report: 
-              precision    recall  f1-score   support
+ [[484  57]
+ [ 93 247]] 
 
-          0       0.42      0.99      0.59      7900
-          1       0.95      0.02      0.03      5635
-          2       0.85      0.12      0.21      6044
-
-avg / total       0.71      0.44      0.31     19579
-
-```
-AdaBoost:
-```
-Training Score : 0.6292977254067664
-Confusion Matrix:
- [[7301  311  288]
- [2875 2627  133]
- [2858  203 2983]] 
- 10-fold Cross Validation Report: 
-              precision    recall  f1-score   support
-
-          0       0.56      0.92      0.70      7900
-          1       0.84      0.47      0.60      5635
-          2       0.88      0.49      0.63      6044
-
-avg / total       0.74      0.66      0.65     19579
-
-```
-Support Vector Machine:
-```
-Training Score : 0.40349420090683086
-Confusion Matrix:
- [[7900    0    0]
- [5635    0    0]
- [6043    0    1]]
 10-fold Cross Validation Report: 
               precision    recall  f1-score   support
 
-          0       0.40      1.00      0.58      7900
-          1       0.00      0.00      0.00      5635
-          2       1.00      0.00      0.00      6044
+          0       0.84      0.89      0.87       541
+          1       0.81      0.73      0.77       340
 
-avg / total       0.47      0.40      0.23     19579
+avg / total       0.83      0.83      0.83       881
+
+```
+Randomforest:
+```
+Training Score : 0.8081588355464759
+Confusion Matrix:
+  [[483  58]
+  [106 234]] 
+ 
+10-fold Cross Validation Report: 
+              precision    recall  f1-score   support
+
+          0       0.82      0.89      0.85       541
+          1       0.80      0.69      0.74       340
+
+avg / total       0.81      0.81      0.81       881
+
+```
+AdaBoost
+```
+Training Score : 0.8103804902962205
+Confusion Matrix:
+[[539   2]
+ [  5 335]] 
+ 
+10-fold Cross Validation Report: 
+              precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99       541
+          1       0.99      0.99      0.99       340
+
+avg / total       0.99      0.99      0.99       881
+
+```
+Support Vector Machine :
+```
+Training Score : 0.8161006128702757
+Confusion Matrix:
+ [[478  63]
+ [ 83 257]] 
+ 
+10-fold Cross Validation Report: 
+              precision    recall  f1-score   support
+
+          0       0.85      0.88      0.87       541
+          1       0.80      0.76      0.78       340
+
+avg / total       0.83      0.83      0.83       881
 
 ```
 Naive Bayes classification :
 ```
-Training Score : 0.8329333739756135
+Training Score : 0.7956716036772217
 Confusion Matrix:
- [[7414  110  376]
- [ 631 4764  240]
- [ 588   89 5367]] 
+ [[431 110]
+ [ 63 277]]
+ 
 10-fold Cross Validation Report: 
               precision    recall  f1-score   support
 
-          0       0.86      0.94      0.90      7900
-          1       0.96      0.85      0.90      5635
-          2       0.90      0.89      0.89      6044
+          0       0.87      0.80      0.83       541
+          1       0.72      0.81      0.76       340
 
-avg / total       0.90      0.90      0.90     19579
+avg / total       0.81      0.80      0.81       881
+```
+VotingClassifier
+```
+Training Score : 0.8308605720122575
+Confusion Matrix:
+  [[484  57]
+  [ 84 256]] 
+ 
+10-fold Cross Validation Report: 
+              precision    recall  f1-score   support
+
+          0       0.85      0.89      0.87       541
+          1       0.82      0.75      0.78       340
+
+avg / total       0.84      0.84      0.84       881
 ```
 ### Prediction
 
-Model : Naive Bayes classification
+Model : VotingClassifier
 
-Kaggle Score : 0.48767
+Kaggle Score : 0.78468
 
-Kaggle rank : 793 / 1244 (63.7%) [2018.4.5] 
+Kaggle rank : 4304 / 10676 (40.3%) [2018.4.5] 
 
 
